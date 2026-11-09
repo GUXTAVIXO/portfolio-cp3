@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimídia HTML5</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <h1>Recursos Multimídia</h1>
+        <p>Exemplos com vídeo, áudio e conteúdo incorporado.</p>
+    
+        <button class="botao-tema" type="button" id="alternar-tema" aria-label="Ativar tema escuro" aria-pressed="false">🌙 Tema escuro</button>
+    </header>
+
+    <nav class="menu" aria-label="Navegação principal">
+    <ul>
+        <li><a href="index.html">Apresentação</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="formulario.html">Contato</a></li>
+        <li><a class="ativo" aria-current="page" href="multimidia.html">Multimídia</a></li>
+        <li><a href="graficos.html">Gráficos</a></li>
+    </ul>
+</nav>
+
+    <main class="conteudo-flex">
+        <section>
+            <h2>Vídeo local</h2>
+            <article>
+                <h3>Exemplo com &lt;video&gt;</h3>
+                <video controls>
+                    <source src="media/video-exemplo.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo em HTML5.
+                </video>
+            </article>
+        </section>
+
+        <section>
+            <h2>Áudio local</h2>
+            <article>
+                <h3>Exemplo com &lt;audio&gt;</h3>
+                <audio controls>
+                    <source src="media/audio-exemplo.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio em HTML5.
+                </audio>
+            </article>
+        </section>
+
+        <section>
+            <h2>Vídeo incorporado</h2>
+            <article>
+                <h3>YouTube responsivo</h3>
+                <div class="youtube-responsivo">
+                    <iframe
+                        src="https://www.youtube.com/embed/vzOvVrE62Xk"
+                        title="Vídeo incorporado do YouTube"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="observacao">O iframe acompanha a largura disponível da página ao redimensionar a janela.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto pessoal de Gustavo Santos de Oliveira — 2026.</p>
+    </footer>
+</body>
+</html>

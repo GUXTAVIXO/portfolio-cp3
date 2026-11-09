@@ -1,0 +1,26 @@
+# Git
+.git/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Temporários e logs
+*.tmp
+*.temp
+*.log
+*~
+
+# Dependências e saídas de build, caso sejam adicionadas futuramente
+node_modules/
+dist/
+build/
+
+# Arquivos compactados e binários locais não necessários ao site
+*.rar
+*.zip

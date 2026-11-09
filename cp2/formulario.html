@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <h1>Formulário de contato</h1>
+        <p>Preencha os campos abaixo para testar os recursos de formulário e validação nativa do HTML5.</p>
+    
+        <button class="botao-tema" type="button" id="alternar-tema" aria-label="Ativar tema escuro" aria-pressed="false">🌙 Tema escuro</button>
+    </header>
+
+    <nav class="menu" aria-label="Navegação principal">
+    <ul>
+        <li><a href="index.html">Apresentação</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a class="ativo" aria-current="page" href="formulario.html">Contato</a></li>
+        <li><a href="multimidia.html">Multimídia</a></li>
+        <li><a href="graficos.html">Gráficos</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <section>
+            <h2>Entre em contato</h2>
+            <article>
+                <h3>Formulário</h3>
+                <form id="form-contato" action="#" method="post" novalidate>
+                    <p class="feedback-formulario" id="feedback-formulario" role="status" aria-live="polite" hidden></p>
+                    <div class="campo">
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone"
+                               placeholder="(11) 99999-9999"
+                               pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                               title="Digite no formato (11) 99999-9999">
+                    </div>
+
+                    <div class="campo">
+                        <label for="nascimento">Data de nascimento:</label>
+                        <input type="date" id="nascimento" name="nascimento">
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione</option>
+                            <option value="contato">Contato</option>
+                            <option value="projeto">Projeto</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <fieldset>
+                        <legend>Preferência de contato:</legend>
+                        <label><input type="radio" name="preferencia" value="email" required> E-mail</label>
+                        <label><input type="radio" name="preferencia" value="telefone"> Telefone</label>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" minlength="10" required></textarea>
+                    </div>
+
+                    <div class="campo">
+                        <label>
+                            <input type="checkbox" name="aceite" required>
+                            Confirmo que os dados informados estão corretos.
+                        </label>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto pessoal de Gustavo Santos de Oliveira — 2026.</p>
+    </footer>
+</body>
+</html>

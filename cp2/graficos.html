@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos | Canvas e SVG</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <h1>Recursos Gráficos</h1>
+        <p>Exemplos de Canvas e SVG no HTML5.</p>
+    
+        <button class="botao-tema" type="button" id="alternar-tema" aria-label="Ativar tema escuro" aria-pressed="false">🌙 Tema escuro</button>
+    </header>
+
+    <nav class="menu" aria-label="Navegação principal">
+    <ul>
+        <li><a href="index.html">Apresentação</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="formulario.html">Contato</a></li>
+        <li><a href="multimidia.html">Multimídia</a></li>
+        <li><a class="ativo" aria-current="page" href="graficos.html">Gráficos</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <section>
+            <h2>Desenho com Canvas</h2>
+            <article>
+                <h3>Canvas controlado por JavaScript</h3>
+                <p>O exemplo contém um retângulo e um círculo com cores, posições e dimensões personalizadas.</p>
+                <canvas id="desenho" width="360" height="180" aria-label="Canvas com um retângulo azul e um círculo verde">
+                    Seu navegador não suporta o elemento Canvas.
+                </canvas>
+            </article>
+        </section>
+
+        <section>
+            <h2>Desenho com SVG</h2>
+            <article>
+                <h3>Formas vetoriais responsivas</h3>
+                <svg class="svg-responsivo"
+                     viewBox="0 0 500 260"
+                     role="img"
+                     aria-label="Ilustração SVG com retângulo, círculo e triângulo">
+                    <title>Formas geométricas criadas com SVG</title>
+                    <rect class="forma-retangulo" x="30" y="45" width="150" height="90" rx="12"></rect>
+                    <circle class="forma-circulo" cx="290" cy="90" r="55"></circle>
+                    <polygon class="forma-poligono" points="390,145 455,235 325,235"></polygon>
+                </svg>
+            </article>
+        </section>
+
+        <section>
+            <h2>Canvas x SVG</h2>
+            <article>
+                <h3>Quando usar cada tecnologia?</h3>
+                <p>O <strong>Canvas</strong> é indicado para desenhos que mudam rapidamente, como jogos, animações e gráficos dinâmicos, pois trabalha com pixels controlados por JavaScript. O <strong>SVG</strong> é indicado para ícones, logotipos, diagramas e ilustrações que precisam manter a qualidade em diferentes tamanhos, pois utiliza formas vetoriais.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto pessoal de Gustavo Santos de Oliveira — 2026.</p>
+    </footer>
+</body>
+</html>

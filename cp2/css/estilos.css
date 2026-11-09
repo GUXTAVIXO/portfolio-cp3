@@ -1,0 +1,493 @@
+/* =========================================================
+   CP1 RESPONSIVO — mobile first
+   Trio solicitado: Flexbox + Grid + Media Queries
+   ========================================================= */
+
+:root {
+    --azul-900: #2d4358;
+    --azul-800: #38526a;
+    --azul-600: #3c9bd6;
+    --azul-100: #eaf3f8;
+    --fundo: #f5f7f9;
+    --card: #ffffff;
+    --texto: #263746;
+    --texto-suave: #60717e;
+    --borda: #dce4e9;
+    --sombra: 0 8px 24px rgba(45, 67, 88, 0.08);
+    --raio: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--fundo);
+    line-height: 1.6;
+}
+
+/* FLEXBOX NO CABEÇALHO */
+.topo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.4rem 1rem;
+    background: var(--azul-900);
+    color: #fff;
+}
+
+.topo h1,
+.topo p {
+    margin: 0;
+}
+
+.topo h1 {
+    font-size: clamp(1.55rem, 5vw, 2.35rem);
+}
+
+.topo p {
+    color: #e8eef2;
+}
+
+/* FLEXBOX NO MENU + QUEBRA DE LINHA */
+.menu {
+    padding: 0.7rem 1rem;
+    background: #fff;
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1120px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    justify-content: center;
+}
+
+.menu a {
+    display: block;
+    padding: 0.65rem 0.9rem;
+    border-radius: 9px;
+    color: var(--azul-900);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible,
+.menu a.ativo {
+    background: var(--azul-900);
+    color: #fff;
+}
+
+main {
+    width: min(100% - 2rem, 1120px);
+    margin: 1.25rem auto 2rem;
+}
+
+section {
+    min-width: 0;
+    margin-bottom: 1rem;
+    padding: 1.1rem;
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+section h2,
+article h3 {
+    color: var(--azul-900);
+}
+
+section h2 {
+    margin-top: 0;
+    border-bottom: 3px solid var(--azul-600);
+    padding-bottom: 0.45rem;
+}
+
+article {
+    min-width: 0;
+}
+
+.destaque {
+    font-weight: 700;
+    color: var(--azul-800);
+}
+
+/* GRID: currículo começa com uma coluna no celular */
+.curriculo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.curriculo-grid section {
+    margin: 0;
+}
+
+/* FLEXBOX EM CONTEÚDO: lista de itens do projeto */
+.habilidades-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.habilidades-flex li {
+    flex: 1 1 180px;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background: var(--azul-100);
+    border: 1px solid #d7e7f0;
+}
+
+/* FLEXBOX em outra área de conteúdo */
+.conteudo-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.conteudo-flex section {
+    margin: 0;
+    flex: 1 1 280px;
+}
+
+/* Tabelas responsivas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid var(--borda);
+    text-align: left;
+}
+
+th {
+    background: var(--azul-100);
+}
+
+/* Formulário fluido */
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+.campo {
+    display: grid;
+    gap: 0.35rem;
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    max-width: 100%;
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    padding: 0.75rem;
+    border: 1px solid #bdc8d0;
+    border-radius: 9px;
+    background: #fff;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+fieldset {
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+}
+
+fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-right: 1rem;
+}
+
+fieldset input,
+.campo label input[type="checkbox"] {
+    width: auto;
+}
+
+button {
+    border: 0;
+    border-radius: 9px;
+    padding: 0.8rem 1rem;
+    background: var(--azul-600);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+    background: var(--azul-900);
+}
+
+/* Mídias e gráficos nunca ultrapassam a tela */
+video,
+audio,
+canvas,
+.svg-responsivo {
+    max-width: 100%;
+}
+
+video,
+canvas,
+.svg-responsivo {
+    height: auto;
+}
+
+.youtube-responsivo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.youtube-responsivo iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.forma-retangulo { fill: #2563eb; }
+.forma-circulo { fill: #16a34a; }
+.forma-poligono { fill: #f59e0b; }
+
+footer {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    background: var(--azul-900);
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =========================================================
+   MEDIA QUERY — tablet e desktop
+   Mobile-first: regras acima são para telas pequenas.
+   ========================================================= */
+@media (min-width: 700px) {
+    .topo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: max(2rem, calc((100% - 1120px) / 2));
+    }
+
+    .topo p {
+        text-align: right;
+        max-width: 430px;
+    }
+
+    .menu ul {
+        justify-content: flex-end;
+    }
+
+    /* GRID em duas colunas no currículo */
+    .curriculo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    /* Tecnologias ocupa toda a largura para a tabela respirar */
+    .curriculo-grid #tecnologias {
+        grid-column: 1 / -1;
+    }
+
+    .conteudo-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    form .campo:has(textarea),
+    form fieldset,
+    form button,
+    form .campo:has(input[type="checkbox"]) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        margin-top: 1.75rem;
+    }
+
+    section {
+        padding: 1.35rem;
+    }
+}
+
+
+/* =========================================================
+   CP3 — tema claro/escuro e feedback de formulário
+   ========================================================= */
+:root {
+    color-scheme: light;
+    --fundo: #f5f7f9;
+    --card: #ffffff;
+    --texto: #263746;
+    --texto-suave: #60717e;
+    --borda: #dce4e9;
+    --azul-100: #eaf3f8;
+}
+
+:root[data-theme="escuro"] {
+    color-scheme: dark;
+    --fundo: #111827;
+    --card: #1f2937;
+    --texto: #f3f4f6;
+    --texto-suave: #cbd5e1;
+    --borda: #374151;
+    --azul-100: #26384b;
+    --azul-900: #172b40;
+    --azul-800: #c6d9e8;
+    --azul-600: #2689c4;
+    --sombra: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="escuro"] .menu {
+    background: #1f2937;
+    border-bottom-color: var(--borda);
+}
+
+:root[data-theme="escuro"] .menu a {
+    color: #e5e7eb;
+}
+
+:root[data-theme="escuro"] .menu a:hover,
+:root[data-theme="escuro"] .menu a:focus-visible,
+:root[data-theme="escuro"] .menu a.ativo {
+    background: #3c9bd6;
+    color: #fff;
+}
+
+:root[data-theme="escuro"] input,
+:root[data-theme="escuro"] select,
+:root[data-theme="escuro"] textarea {
+    background: #111827;
+    color: #f3f4f6;
+    border-color: #4b5563;
+}
+
+:root[data-theme="escuro"] th {
+    background: #26384b;
+}
+
+:root[data-theme="escuro"] .habilidades-flex li {
+    background: #26384b;
+    border-color: #40566b;
+}
+
+.botao-tema {
+    width: auto;
+    align-self: flex-start;
+    margin-top: 0.8rem;
+    padding: 0.6rem 0.85rem;
+    background: #ffffff;
+    color: var(--azul-900);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    white-space: nowrap;
+}
+
+.botao-tema:hover,
+.botao-tema:focus-visible {
+    background: #eaf3f8;
+    color: #263746;
+}
+
+:root[data-theme="escuro"] .botao-tema {
+    background: #26384b;
+    color: #ffffff;
+    border-color: #52677a;
+}
+
+.feedback-formulario {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0.9rem 1rem;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+.feedback-erro {
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+.feedback-sucesso {
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+}
+
+:root[data-theme="escuro"] .feedback-erro {
+    color: #fecaca;
+    background: #451a1a;
+    border-color: #7f1d1d;
+}
+
+:root[data-theme="escuro"] .feedback-sucesso {
+    color: #bbf7d0;
+    background: #153522;
+    border-color: #166534;
+}
+
+@media (min-width: 700px) {
+    .botao-tema {
+        margin-top: 0;
+        align-self: center;
+    }
+}

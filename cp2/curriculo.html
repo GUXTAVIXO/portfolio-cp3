@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo | Gustavo Santos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <h1>Currículo</h1>
+        <p>Informações acadêmicas e conhecimentos de Gustavo Santos de Oliveira.</p>
+    
+        <button class="botao-tema" type="button" id="alternar-tema" aria-label="Ativar tema escuro" aria-pressed="false">🌙 Tema escuro</button>
+    </header>
+
+    <nav class="menu" aria-label="Navegação principal">
+    <ul>
+        <li><a href="index.html">Apresentação</a></li>
+        <li><a class="ativo" aria-current="page" href="curriculo.html">Currículo</a></li>
+        <li><a href="formulario.html">Contato</a></li>
+        <li><a href="multimidia.html">Multimídia</a></li>
+        <li><a href="graficos.html">Gráficos</a></li>
+    </ul>
+</nav>
+
+    <main class="curriculo-grid">
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <p>Sou muito interessado pela área de tecnologia e, através da faculdade de Análise e Desenvolvimento de Sistemas, estou me aprofundando cada vez mais na área.</p>
+            <p><span class="destaque">Estou sempre buscando evoluir e adquirir novos conhecimentos.</span></p>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação e idiomas</h2>
+            <ol>
+                <li>Curso Técnico de Informática</li>
+                <li>Graduação em Análise e Desenvolvimento de Sistemas — conclusão prevista para 2027</li>
+                <li><span class="destaque">Inglês intermediário</span></li>
+            </ol>
+        </section>
+
+        <section id="tecnologias">
+            <h2>Tecnologias favoritas</h2>
+            <table>
+                <caption>Tecnologias estudadas, nível e objetivo</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tecnologia</th>
+                        <th scope="col">Nível</th>
+                        <th scope="col">Objetivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">HTML5</th><td>Intermediário</td><td>Semântica e acessibilidade</td></tr>
+                    <tr><th scope="row">CSS3</th><td>Iniciante</td><td>Layouts responsivos</td></tr>
+                    <tr><th scope="row">JavaScript</th><td>Iniciante</td><td>Interatividade</td></tr>
+                    <tr><th scope="row">Git e GitHub</th><td>Iniciante</td><td>Controle de versão</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <article>
+                <h3>Meu primeiro site</h3>
+                <p>Site desenvolvido para apresentar meu currículo, projetos e conhecimentos adquiridos durante meus estudos.</p>
+                <ul class="habilidades-flex">
+                    <li>Página de apresentação</li>
+                    <li>Currículo em HTML</li>
+                    <li>Formulário com validação nativa</li>
+                    <li>Multimídia e recursos gráficos</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Veja a página <a href="formulario.html">Formulário de contato</a> para enviar uma mensagem.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto pessoal de Gustavo Santos de Oliveira — 2026.</p>
+    </footer>
+</body>
+</html>
