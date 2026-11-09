@@ -20,7 +20,9 @@
     }
 
     function iniciarTema() {
-        let temaSalvo = "claro";
+        let temaSalvo = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "escuro"
+    : "claro";
 
         try {
             temaSalvo = localStorage.getItem(CHAVE_TEMA) || "claro";
