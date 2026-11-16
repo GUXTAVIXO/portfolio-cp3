@@ -28,11 +28,13 @@ Abra `index.html` no navegador. Navegue pelas cinco páginas, alterne o tema e r
 
 ## Multimídia
 
-A pasta `media/` está sem arquivos no CP2 recebido. Para que os controles locais de áudio e vídeo reproduzam conteúdo, adicione:
-- `media/video-exemplo.mp4`
-- `media/audio-exemplo.mp3`
+A página utiliza um vídeo incorporado do YouTube e um áudio hospedado no Wikimedia Commons. Ambos dependem de conexão com a internet. O áudio inclui link para consultar a origem e as informações de licença.
 
-O vídeo incorporado do YouTube depende de conexão com a internet.
+## Bootstrap e acessibilidade — CP4
+
+O Bootstrap 5.3.3 é carregado por CDN nas páginas. Na página Multimídia são utilizadas classes como `container`, `py-4`, `card`, `card-body`, `ratio`, `ratio-16x9` e `w-100`. O CSS do projeto continua sendo carregado depois do Bootstrap.
+
+Foi acrescentado um indicador de foco visível para links, botões, campos de formulário, áudio e iframe, permitindo identificar o elemento selecionado pelo teclado. Os textos alternativos/nomes acessíveis dos controles e títulos dos iframes devem ser mantidos ao editar o conteúdo.
 
 ## Git e GitHub — roteiro para a entrega
 

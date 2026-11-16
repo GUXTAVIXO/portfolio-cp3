@@ -491,3 +491,17 @@ footer p {
         align-self: center;
     }
 }
+
+
+/* CP4: foco visível para navegação por teclado */
+:where(a, button, input, select, textarea, audio, iframe):focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* Mantém o vídeo incorporado ocupando toda a área responsiva do Bootstrap. */
+.youtube-responsivo iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
